@@ -1,0 +1,12 @@
+body { background: #3E4558; }
+
+form { width: 300px; height: 300px; margin: 100px auto; }
+form h3 { text-align: center; font-size: 24px; font-weight: 600; padding: 20px; color: #fff; }
+form p { margin: 20px auto; width: 280px; }
+form p input { width: 250px; height: 38px; margin-left: 15px; border-radius: 5px; border: none; outline: none; text-indent: 1em; }
+form p input::-webkit-input-placeholder { color: gray; font-size: 14px; }
+form p button { width: 250px; height: 38px; border-radius: 5px; border: 0; margin-left: 15px; background: #337ab7; color: #fff; }
+form a { color: #fff; text-decoration: none; display: inline-block; width: 132px; height: 20px; margin-left: 88px; }
+form a:hover { color: gray; text-decoration: none; }
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap框架样式 -->
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+  <!--去除浏览器默认样式 -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="../css/login.css">
+  <title>xx后台管理系统登录页面</title>
+</head>
+<body> 
+  <div class="container">
+    <form action="/login.html" method="POST">
+     <h3>xx管理系统登录</h3>
+     <p><input type="text" name="name" placeholder="用户名/手机号" autocomplete="off"/></p>
+     <p><input type="password" name="pwd" placeholder="密码" autocomplete="off"/></p>
+     <p><button type="submit">login</button></p>
+     <a href="/register.html">还没有账号，立即注册！</a>
+    </form>
+  </div>
+</body>
+</html>

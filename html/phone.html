@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap框架样式 -->
+  <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+  <!--去除浏览器默认样式 -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <title>xx后台管理系统</title>
+</head>
+<body>
+  <div class="container">
+    <%- include("./common/head.ejs")%>
+    <div class="nzp-main">
+        <%- include("./common/menu.ejs")%>
+       <%= title %>
+    </div>
+    <%- include("./common/foot.ejs")%>
+  </div>
+</body>
+</html>

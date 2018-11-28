@@ -1,0 +1,132 @@
+/* 整个项目都可以使用公共的样式 */
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.nzp-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    color: #fff;
+    background: #3E4558;
+    .logo {
+        font-size: 24px;
+        text-decoration: none;
+        margin-left: 20px;
+        color: #fff;
+    }
+    .head-right {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        .btn {
+            width: 60px;
+            height: 30px;
+            margin-left: 20px;
+            padding: 0;
+        }
+    }
+}
+
+.nzp-main {
+    height: 100%;
+    display: flex;
+    .nzp-menu {
+        width: 170px;
+        height: 100%;
+        overflow-y: auto;
+        border-right: 1px solid blueviolet;
+        background: #337ab7;
+        a {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        li {
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            font-size: 16px;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            &:hover {
+                background: rgba(152, 238, 112, 0.5);
+            }
+        }
+    }
+    .body {
+        background: #fff;
+        flex: 1;
+        padding: 0 40px;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+            .navbar-form {
+                padding: 0;
+                .form-group {
+                    padding: 10px;
+                    padding-left: 0;
+                    .form-control {
+                        width: 300px;
+                        height: 30px;
+                        border: 1px solid rgb(116, 180, 223);
+                    }
+                }
+                .search {
+                    width: 60px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0
+                }
+            }
+            .table {
+                thead {
+                    background: #337ab7;
+                    color: #fff;
+                }
+                tbody {
+                    tr:hover {
+                        background: rgba(152, 238, 112, 0.5);
+                    }
+                }
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                th {
+                    border: 0.5px solid rgba(0, 0, 0, 0.5);
+                }
+                td {
+                    border: 0.5px solid rgba(0, 0, 0, 0.5);
+                }
+            }
+            .pagination {
+                margin: 0;
+                float: right;
+            }
+        
+    }
+}
+
+.nzp-foot {
+    height: 40px;
+    border-top: 1px solid #fff;
+    background: #3E4558;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*=====================================修改bootstrap样式===========================================================*/

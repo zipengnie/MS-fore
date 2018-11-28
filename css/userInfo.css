@@ -1,0 +1,13 @@
+.body { background: #fff; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0 40px; }
+.body .navbar-form { padding: 0; }
+.body .navbar-form .form-group { padding: 10px; padding-left: 0; }
+.body .navbar-form .form-group .form-control { width: 300px; height: 30px; border: 1px solid #74b4df; }
+.body .navbar-form .search { width: 60px; height: 30px; line-height: 30px; padding: 0; }
+.body .table { border: 1px solid rgba(0, 0, 0, 0.5); }
+.body .table thead { background: #337ab7; color: #fff; }
+.body .table tbody tr:hover { background: rgba(152, 238, 112, 0.5); }
+.body .table th { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.body .table td { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.body .pagination { margin: 0; float: right; }
+
+/*# sourceMappingURL=userInfo.css.map */

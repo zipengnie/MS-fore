@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* 整个项目都可以使用公共的样式 */
+html, body { height: 100%; }
+
+.container { width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 0; }
+
+.nzp-head { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; height: 60px; border-bottom: 1px solid #fff; padding: 10px 0; color: #fff; background: #3E4558; }
+.nzp-head .logo { font-size: 24px; text-decoration: none; margin-left: 20px; color: #fff; }
+.nzp-head .head-right { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 40px; }
+.nzp-head .head-right .btn { width: 60px; height: 30px; margin-left: 20px; padding: 0; }
+
+.nzp-main { height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.nzp-main .nzp-menu { width: 170px; height: 100%; overflow-y: auto; border-right: 1px solid blueviolet; background: #337ab7; }
+.nzp-main .nzp-menu a { text-decoration: none; color: #fff; letter-spacing: 2px; }
+.nzp-main .nzp-menu li { width: 100%; height: 35px; line-height: 35px; font-size: 16px; text-align: center; border-bottom: 1px solid #fff; }
+.nzp-main .nzp-menu li:hover { background: rgba(152, 238, 112, 0.5); }
+.nzp-main .body { background: #fff; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0 40px; }
+.nzp-main .body iframe { width: 100%; height: 100%; }
+.nzp-main .body .navbar-form { padding: 0; }
+.nzp-main .body .navbar-form .form-group { padding: 10px; padding-left: 0; }
+.nzp-main .body .navbar-form .form-group .form-control { width: 300px; height: 30px; border: 1px solid #74b4df; }
+.nzp-main .body .navbar-form .search { width: 60px; height: 30px; line-height: 30px; padding: 0; }
+.nzp-main .body .table { border: 1px solid rgba(0, 0, 0, 0.5); }
+.nzp-main .body .table thead { background: #337ab7; color: #fff; }
+.nzp-main .body .table tbody tr:hover { background: rgba(152, 238, 112, 0.5); }
+.nzp-main .body .table th { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.nzp-main .body .table td { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.nzp-main .body .pagination { margin: 0; float: right; }
+
+.nzp-foot { height: 40px; border-top: 1px solid #fff; background: #3E4558; color: #fff; font-size: 12px; text-align: center; line-height: 40px; }
+
+/*=====================================修改bootstrap样式===========================================================*/
+
+/*# sourceMappingURL=common.css.map */

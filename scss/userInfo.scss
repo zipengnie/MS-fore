@@ -1,0 +1,47 @@
+.body {
+  background: #fff;
+  flex: 1;
+  padding: 0 40px;
+  .navbar-form{
+      padding: 0;
+      .form-group {
+          padding: 10px;
+          padding-left: 0;
+          .form-control {
+              width: 300px;
+              height: 30px;
+              border: 1px solid rgb(116, 180, 223);
+          }
+      }
+      .search  {
+          width: 60px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0
+      }
+  }
+ .table {
+      thead {
+          background: #337ab7;
+          color: #fff;
+      }
+      tbody {
+          tr:hover {
+              background: rgba(152, 238, 112, 0.5);
+          }
+      }
+      
+      border: 1px solid rgba(0,0,0,0.5);
+      th {
+          border: 0.5px solid rgba(0,0,0,0.5);
+          
+      }
+      td {
+          border: 0.5px solid rgba(0,0,0,0.5);
+      }
+ }
+ .pagination {
+     margin: 0;
+     float: right;
+ }
+}
