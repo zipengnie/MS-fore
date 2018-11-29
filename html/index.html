@@ -17,23 +17,25 @@
   <div class="container">
     <!-- web头部 -->
     <div class="nzp-head">
-      <div class="head-left"><a href="/" class="logo">xx后台管理系统</a></div>
+      <div class="head-left"><a class="logo">xx后台管理系统</a></div>
       <div class="head-right">
-        <h2>欢迎您-Admin-(管理员)</h2>
-        <button type="button" class="btn btn-primary">退出</button>
+        <h2 id="loginName">欢迎您-Admin-(管理员)</h2>
+        <button type="button" id="logout" class="btn btn-primary">退出</button>
       </div>
     </div>
 
     <div class="nzp-main">
       <!-- 侧边菜单 -->
       <ul class="nzp-menu">
-        <li><a href="userInfo.html">用户管理</a></li>
-        <li><a href="brand.html">品牌管理</a></li>
-        <li><a href="phone.html">手机管理</a></li>
+        <li><a id="userInfo" >用户管理</a></li>
+        <li><a id="brand" >品牌管理</a></li>
+        <li><a id="phone" >手机管理</a></li>
       </ul>
       <div class="body">
         <!-- 用户信息页面 -->
-        <iframe src="userInfo.html" frameborder="0"></iframe>
+        <!-- <div id="welcome" style="width:100%;height:100%;text-align: center;background:red">welcome</div> -->
+        <div id="welcome">welcome</div>
+        <iframe></iframe>
       </div>
     </div>
     <!-- web尾部 -->
@@ -44,3 +46,5 @@
 </body>
 
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/index.js"></script>

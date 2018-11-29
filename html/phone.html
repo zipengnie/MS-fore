@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,50 @@
   <link rel="stylesheet" href="../css/reset.css">
   <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet" href="../css/userInfo.css">
   <title>xx后台管理系统</title>
 </head>
+
 <body>
   <div class="container">
-    <%- include("./common/head.ejs")%>
-    <div class="nzp-main">
-        <%- include("./common/menu.ejs")%>
-       <%= title %>
-    </div>
-    <%- include("./common/foot.ejs")%>
-  </div>
+        <form class="navbar-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <button type="submit" class="search btn btn-primary">搜索</button>
+        </form>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>用户名</th>
+              <th>昵称</th>
+              <th>年龄</th>
+              <th>性别</th>
+              <th>是否为管理员</th>
+              <th>删除</th>
+            </tr>
+          </thead>
+          <tbody>
+           手机
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
+              aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
+          <% for(var i = 0;i < totalPage; i++) { %>
+          <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
+              <%= i+1%><span class="sr-only">
+              </span></a>
+          </li>
+          <%}%>
+          <li>
+            <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
+                aria-hidden="true">»</span></a>
+          </li>
+        </ul>
 </body>
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/register.js"></script>

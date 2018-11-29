@@ -2,21 +2,25 @@ body {
   background: #3E4558;
 }
 form {
-  width:400px;
+  width:480px;
   background:#337ab736;
   margin: 40px auto;
   border-radius: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
   h3 {
     text-align: center;
     font-size: 24px;
     font-weight: 600;
     padding: 20px;
+    padding-left: 0;
     color:#fff;
   }
   p {
     margin:20px auto;
-    width:320px;
-    // background: #337ab7;
+    // background: #008000;
+    margin:20px auto;
+    width:420px;
     color:#fff;
     font-size: 14px;
     input {
@@ -32,8 +36,8 @@ form {
       }
     }
     #radio {
-      width:320px;
-      height: 38px;
+      margin:20px auto;
+      width:410px;
       input {
         width: 12px;
         height: 12px;
@@ -42,24 +46,28 @@ form {
       }
     }
     button {
-      width: 320px;
+      margin-left:63px;
+      width:250px;
       height: 38px;
       border-radius:5px;
       border: 0;
       background: #337ab7;
       color: #fff;
     }
-    a {
+    }
+    #login {
       color: #fff;
+      font-size:14px;
       text-decoration: none;
-      display: inline-block;
-      width:120px;
+      text-align: center;
+      display: block;
       height: 20px;
-      margin-left:140px ;
+      width: 250px;
+      margin: auto;
+      margin-left: 84px;
       &:hover {
         color:gray;
         text-decoration: none;
       }
-    }
   }
   

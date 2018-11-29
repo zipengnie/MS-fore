@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    
 }
 
 .container {
@@ -51,6 +52,9 @@ body {
         border-right: 1px solid blueviolet;
         background: #337ab7;
         a {
+            display: inline-block;
+            width: 100%;
+            line-height: 35px;
             text-decoration: none;
             color: #fff;
             letter-spacing: 2px;
@@ -64,16 +68,25 @@ body {
             border-bottom: 1px solid #fff;
             &:hover {
                 background: rgba(152, 238, 112, 0.5);
+                cursor: pointer;
             }
         }
     }
     .body {
-        background: #fff;
         flex: 1;
+        display: flex;
+        justify-content:center;
+        align-items: center;
         padding: 0 40px;
+        #welcome {
+            text-align: center;
+            font-size: 80px;
+            color: rgb(51, 122, 183);
+        }
         iframe {
             width: 100%;
             height: 100%;
+            display: none;
         }
             .navbar-form {
                 padding: 0;

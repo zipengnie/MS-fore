@@ -16,35 +16,42 @@
 
 <body>
   <div class="container">
-    <form action="/register.html" method="POST">
+    <form>
       <h3>xx管理系统注册</h3>
       <p>
         <label for="name">用户名：</label>
         <input type="text" name="name" id="name" autocomplete="off" />
+        <span></span>
       </p>
       <p>
         <label for="pwd">密&nbsp;&nbsp;&nbsp;码：</label>
         <input type="password" name="pwd" id="pwd" autocomplete="off" />
+        <span></span>
       </p>
       <p>
         <label for="nickname">昵&nbsp;&nbsp;&nbsp;称：</label>
         <input type="text" name="nickname" id="nickname" autocomplete="off" />
+        <span></span>
       </p>
       <p>
         <label for="age">年&nbsp;&nbsp;&nbsp;龄：</label>
         <input type="text" name="age" id="age" autocomplete="off" />
-      </p>
-      <p  id="radio">
-        <span>性&nbsp;&nbsp;&nbsp;别：</span>
-        <input type="radio" name="sex" value="男"/>男<input type="radio" name="sex" id="sex" value="女" />女
+        <span></span>
       </p>
       <p id="radio">
-        <span>是否为管理员：</span><input type="radio" name="isAdmin" value="是"/>是<input type="radio" name="isAdmin" id="isAdmin" value="否" checked />否
+        <span>性&nbsp;&nbsp;&nbsp;别：</span>
+        <input type="radio" name="sex" value="男" checked />男<input type="radio" name="sex" id="sex" value="女" />女
       </p>
-      <p><button type="submit">register</button></p>
-      <a href="/login.html">已有账号，立即登陆！</a>
+      <p id="radio">
+        <span>管理员：</span><input type="radio" name="isAdmin" value="是" />是<input type="radio" name="isAdmin" id="isAdmin"
+          value="否" checked />否
+      </p>
+      <p><button type="button" id="btn">register</button></p>
+      <a href="login.html" id="login">已有账号，立即登陆！</a>
     </form>
   </div>
 </body>
 
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/register.js"></script>

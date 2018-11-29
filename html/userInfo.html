@@ -37,33 +37,7 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i = 0;i < list.length; i++){ %>
-            <tr>
-              <th scope="row">
-                <%= i+1 %>
-              </th>
-              <td>
-                <%= list[i].userName %>
-              </td>
-              <td>
-                <%= list[i].nickname %>
-              </td>
-              <td>
-                <%= list[i].age %>
-              </td>
-              <td>
-                <%= list[i].sex %>
-              </td>
-              <td>
-                <%= list[i].isAdmin %>
-              </td>
-              <td>
-                <% if(!list[i].isAdmin){%>
-                <a href="delete?id=<%= list[i]._id %>">删除</a>
-                <%}%>
-              </td>
-            </tr>
-            <% } %>
+            
           </tbody>
         </table>
         <ul class="pagination">
@@ -82,3 +56,5 @@
         </ul>
 </body>
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/register.js"></script>

@@ -14,13 +14,16 @@
 </head>
 <body> 
   <div class="container">
-    <form action="/login.html" method="POST">
+    <!-- <form action="http://localhost:3000/api/login.html" method="POST" id="sub"> -->
+    <form>
      <h3>xx管理系统登录</h3>
-     <p><input type="text" name="name" placeholder="用户名/手机号" autocomplete="off"/></p>
-     <p><input type="password" name="pwd" placeholder="密码" autocomplete="off"/></p>
-     <p><button type="submit">login</button></p>
-     <a href="/register.html">还没有账号，立即注册！</a>
-    </form>
+     <p><input type="text" name="name" placeholder="用户名/手机号" autocomplete="off"/><span></span></p>
+     <p><input type="password" name="pwd" placeholder="密码" autocomplete="off"/><span></span></p>
+     <p><button type="button" id="btn" >login</button></p>
+     <a href="register.html">还没有账号，立即注册！</a>
+    <!-- </form> -->
   </div>
 </body>
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/login.js"></script>

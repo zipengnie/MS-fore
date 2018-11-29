@@ -11,11 +11,12 @@ html, body { height: 100%; }
 
 .nzp-main { height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .nzp-main .nzp-menu { width: 170px; height: 100%; overflow-y: auto; border-right: 1px solid blueviolet; background: #337ab7; }
-.nzp-main .nzp-menu a { text-decoration: none; color: #fff; letter-spacing: 2px; }
+.nzp-main .nzp-menu a { display: inline-block; width: 100%; line-height: 35px; text-decoration: none; color: #fff; letter-spacing: 2px; }
 .nzp-main .nzp-menu li { width: 100%; height: 35px; line-height: 35px; font-size: 16px; text-align: center; border-bottom: 1px solid #fff; }
-.nzp-main .nzp-menu li:hover { background: rgba(152, 238, 112, 0.5); }
-.nzp-main .body { background: #fff; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0 40px; }
-.nzp-main .body iframe { width: 100%; height: 100%; }
+.nzp-main .nzp-menu li:hover { background: rgba(152, 238, 112, 0.5); cursor: pointer; }
+.nzp-main .body { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0 40px; }
+.nzp-main .body #welcome { text-align: center; font-size: 80px; color: #337ab7; }
+.nzp-main .body iframe { width: 100%; height: 100%; display: none; }
 .nzp-main .body .navbar-form { padding: 0; }
 .nzp-main .body .navbar-form .form-group { padding: 10px; padding-left: 0; }
 .nzp-main .body .navbar-form .form-group .form-control { width: 300px; height: 30px; border: 1px solid #74b4df; }

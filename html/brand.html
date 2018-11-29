@@ -11,36 +11,51 @@
   <link rel="stylesheet" href="../css/reset.css">
   <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet" href="../css/userInfo.css">
   <title>xx后台管理系统</title>
 </head>
 
 <body>
-   <!-- web头部 -->
-   <div class="nzp-head">
-    <div class="head-left"><a href="/" class="logo">xx后台管理系统</a></div>
-    <div class="head-right">
-      <h2>欢迎您-Admin-(管理员)</h2>
-      <button type="button" class="btn btn-primary">退出</button>
-    </div>
-  </div>
-
-  <div class="nzp-main">
-    <!-- 侧边菜单 -->
-    <ul class="nzp-menu">
-      <li><a href="userInfo.html">用户管理</a></li>
-      <li><a href="brand.html">品牌管理</a></li>
-      <li><a href="phone.html">手机管理</a></li>
-    </ul>
-    <div class="body">
-      <!-- 用户信息页面 -->
-      <iframe src="userInfo.html" frameborder="0"></iframe>
-    </div>
-  </div>
-  <!-- web尾部 -->
-  <div class="nzp-foot">
-    ©2018 QF All rights reserved.
-  </div>
-  </div>
+  <div class="container">
+        <form class="navbar-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <button type="submit" class="search btn btn-primary">搜索</button>
+        </form>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>用户名</th>
+              <th>昵称</th>
+              <th>年龄</th>
+              <th>性别</th>
+              <th>是否为管理员</th>
+              <th>删除</th>
+            </tr>
+          </thead>
+          <tbody>
+           品牌
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
+              aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
+          <% for(var i = 0;i < totalPage; i++) { %>
+          <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
+              <%= i+1%><span class="sr-only">
+              </span></a>
+          </li>
+          <%}%>
+          <li>
+            <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
+                aria-hidden="true">»</span></a>
+          </li>
+        </ul>
+        p
 </body>
-
 </html>
+<script src="../jQuery/jquery.min.js"></script>
+<script src="../js/register.js"></script>
