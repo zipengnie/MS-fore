@@ -26,7 +26,7 @@ $(document).ready(function () {
     function loginSucc(res) {
         if (res.code == 0) {
             // 将昵称存到localstorage中
-            localStorage.setItem("nickname", res.data.nickname);
+            localStorage.setItem("user", JSON.stringify({"nickname":res.data.nickname,"isAdmin":res.data.isAdmin}));
             //跳转到主页
             location.href = "./index.html";
         } else {

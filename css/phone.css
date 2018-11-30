@@ -1,0 +1,20 @@
+.body { background: #fff; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 0 40px; }
+.body .navbar-form { padding: 0; }
+.body .navbar-form .form-group { padding: 10px; padding-left: 0; }
+.body .navbar-form .form-group .form-control { width: 300px; height: 30px; border: 1px solid #74b4df; }
+.body .navbar-form .search { width: 90px; height: 30px; line-height: 30px; padding: 0; }
+.body .table { border: 1px solid rgba(0, 0, 0, 0.5); }
+.body .table thead { background: #337ab7; color: #fff; }
+.body .table tbody tr:hover { background: rgba(152, 238, 112, 0.5); }
+.body .table th { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.body .table td { border: 0.5px solid rgba(0, 0, 0, 0.5); }
+.body .pagination { margin: 0; float: right; }
+
+.addForm { width: 480px; background: #337ab736; margin: 40px auto; border-radius: 10px; padding-bottom: 10px; padding-left: 30px; }
+.addForm h3 { text-align: center; font-size: 24px; font-weight: 600; padding: 20px; padding-left: 0; }
+.addForm p { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; justify-items: center; line-height: 19px; margin: 20px auto; margin: 20px auto; height: 38px; width: 420px; font-size: 14px; }
+.addForm p input { width: 250px; height: 38px; margin-left: 5px; border-radius: 5px; border: none; outline: none; text-indent: 1em; font-size: 14px; }
+.addForm p #file { -ms-flex-item-align: center; align-self: center; display: inline-block; width: 180px; vertical-align: middle; padding: 4px 0; text-indent: 0; background: red; }
+.addForm button { margin-left: 82px; width: 60px; height: 38px; border-radius: 5px; border: 0; background: #337ab7; color: #fff; }
+
+/*# sourceMappingURL=phone.css.map */

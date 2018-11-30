@@ -4,13 +4,11 @@ form { width: 480px; background: #337ab736; margin: 40px auto; border-radius: 10
 form h3 { text-align: center; font-size: 24px; font-weight: 600; padding: 20px; padding-left: 0; color: #fff; }
 form p { margin: 20px auto; margin: 20px auto; width: 420px; color: #fff; font-size: 14px; }
 form p input { width: 250px; height: 38px; margin-left: 5px; border-radius: 5px; border: none; outline: none; text-indent: 1em; color: gray; font-size: 14px; }
-form #radio_sex { margin: 20px auto; width: 410px; }
-form #radio_sex input { width: 12px; height: 12px; padding: 0; margin: 13px 6px; }
-form #radio_isAdmin { margin: 20px auto; width: 410px; }
-form #radio_isAdmin input { width: 12px; height: 12px; padding: 0; margin: 13px 6px; }
+form #radio { margin: 20px auto; width: 410px; }
+form #radio input { width: 12px; height: 12px; padding: 0; margin: 13px 6px; }
 form button { margin-left: 63px; width: 250px; height: 38px; border-radius: 5px; border: 0; background: #337ab7; color: #fff; }
 
 #login { color: #fff; font-size: 14px; text-decoration: none; text-align: center; display: block; height: 20px; width: 250px; margin: auto; margin-left: 84px; }
 #login:hover { color: gray; text-decoration: none; }
 
-/*# sourceMappingURL=register.css.map */
+/*# sourceMappingURL=phone.css.map */

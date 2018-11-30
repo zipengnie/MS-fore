@@ -30,8 +30,8 @@ $(document).ready(function () {
 
     //密码输入框
     var pwd = $("input[name='pwd']");
-    //支持字母、数字及以上的组合，6-20个字符
-    var pwdReg = /^[0-9a-zA-Z]{6,20}$/;
+    //支持字母、数字及以上的组合，5-20个字符
+    var pwdReg = /^[0-9a-zA-Z]{5,20}$/;
     //判断用户名存在开关，true代表存在
     var nameExist = true;
     // 密码状态,
@@ -108,23 +108,29 @@ $(document).ready(function () {
     })
     age.keyup(function () {
         if (age.val().length == 0) {
-            age.next().text("昵称不能为空");
+            age.next().text("年龄不能为空");
             ageExist = false;
         } else {
             if (ageReg.test(age.val())) {
                 age.next().text("可用");
                 ageState = "ok";
             } else {
-                age.next().text("昵称不符");
+                age.next().text("年龄不符");
             }
         }
     })
-
+    // 注册请求
+    var sex = $("input[name='sex']");
+    var isAdmin = $("input[name='isAdmin']");
     $("#btn").click(function (e) {
         if (nameState == "no" || pwdState == "no" || nicknameState == "no" || ageState == "no" || name.val() == "" || pwd.val() == "" || nickname.val() == "" || age.val() == "") {
             alert("请填写注册信息并检查填写的信息是否正确！")
             e.preventDefault();
         } else if (nameState == "ok" || pwdState == "ok" || nicknameState == "ok" || ageState == "ok") {
+            $.post("http://localhost:3000/api/register.html", {
+                name: name.val(), pwd: pwd.val(), nickname: nickname.val(),
+                age: age.val(), sex: sex.prop("checked"), isAdmin: isAdmin.prop("checked")
+            })
             location.href = "./login.html";
         }
     })

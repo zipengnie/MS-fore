@@ -18,43 +18,50 @@
 
 <body>
   <div class="container">
-        <form class="navbar-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="">
-          </div>
-          <button type="submit" class="search btn btn-primary">搜索</button>
-        </form>
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>序号</th>
-              <th>用户名</th>
-              <th>昵称</th>
-              <th>年龄</th>
-              <th>性别</th>
-              <th>是否为管理员</th>
-              <th>删除</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-          </tbody>
-        </table>
-        <ul class="pagination">
-          <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
-              aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
-          <% for(var i = 0;i < totalPage; i++) { %>
-          <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
-              <%= i+1%><span class="sr-only">
-              </span></a>
-          </li>
-          <%}%>
-          <li>
-            <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
-                aria-hidden="true">»</span></a>
-          </li>
-        </ul>
+    <form class="navbar-form">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="昵称查询">
+      </div>
+      <button type="button" id="serbtn" class="search btn btn-primary">搜索</button>
+    </form>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>用户名</th>
+          <th>昵称</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>是否为管理员</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+    
+    <table class="table table-bordered table-hover" id="searchTab" style="display:none;position: relative;top:-28%;left:0;transform:translate(50% 50%)">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>用户名</th>
+          <th>昵称</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>是否为管理员</th>
+        </tr>
+      </thead>
+      <tbody id="searchTbody">
+      </tbody>
+    </table>
+    <ul class="pagination">
+     
+    </ul>
+  </div>
+
 </body>
+
 </html>
 <script src="../jQuery/jquery.min.js"></script>
-<script src="../js/register.js"></script>
+<script src="../js/template-web.js"></script>
+<script src="../js/userInfo.js"></script>

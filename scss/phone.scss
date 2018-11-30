@@ -1,0 +1,101 @@
+.body {
+    background: #fff;
+    flex: 1;
+    padding: 0 40px;
+    .navbar-form {
+        padding: 0;
+        .form-group {
+            padding: 10px;
+            padding-left: 0;
+            .form-control {
+                width: 300px;
+                height: 30px;
+                border: 1px solid rgb(116, 180, 223);
+            }
+        }
+        .search {
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0
+        }
+    }
+    .table {
+        thead {
+            background: #337ab7;
+            color: #fff;
+        }
+        tbody {
+            tr:hover {
+                background: rgba(152, 238, 112, 0.5);
+            }
+        }
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        th {
+            border: 0.5px solid rgba(0, 0, 0, 0.5);
+        }
+        td {
+            border: 0.5px solid rgba(0, 0, 0, 0.5);
+        }
+    }
+    .pagination {
+        margin: 0;
+        float: right;
+    }
+}
+
+.addForm {
+    width: 480px;
+    background: #337ab736;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 20px;
+        padding-left: 0;
+    }
+    p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        line-height: 19px;
+        margin: 20px auto;
+        margin: 20px auto;
+        height: 38px;
+        width: 420px;
+        font-size: 14px;
+        input {
+            width: 250px;
+            height: 38px;
+            margin-left: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            text-indent: 1em;
+            font-size: 14px;
+        }
+        #file {
+            align-self: center;
+            display: inline-block;
+            width: 180px;
+            vertical-align: middle;
+            padding: 4px 0;
+            text-indent: 0;
+            background: red;
+        }
+    }
+    button {
+        margin-left: 82px;
+        width: 60px;
+        height: 38px;
+        border-radius: 5px;
+        border: 0;
+        background: #337ab7;
+        color: #fff;
+    }
+}

@@ -12,49 +12,85 @@
   <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
   <!-- 自己的样式 -->
-  <link rel="stylesheet" href="../css/userInfo.css">
+  <link rel="stylesheet" href="../css/phone.css">
   <title>xx后台管理系统</title>
 </head>
 
 <body>
   <div class="container">
-        <form class="navbar-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="">
-          </div>
-          <button type="submit" class="search btn btn-primary">搜索</button>
-        </form>
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>序号</th>
-              <th>用户名</th>
-              <th>昵称</th>
-              <th>年龄</th>
-              <th>性别</th>
-              <th>是否为管理员</th>
-              <th>删除</th>
-            </tr>
-          </thead>
-          <tbody>
-           手机
-          </tbody>
-        </table>
-        <ul class="pagination">
-          <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
-              aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
-          <% for(var i = 0;i < totalPage; i++) { %>
-          <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
-              <%= i+1%><span class="sr-only">
-              </span></a>
-          </li>
-          <%}%>
-          <li>
-            <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
-                aria-hidden="true">»</span></a>
-          </li>
-        </ul>
+    <form class="navbar-form">
+      <button type="button" id="add" class="search btn btn-primary">新增</button>
+    </form>
+    <div class="addInfo">
+      <form class="addForm">
+        <h3>新增</h3>
+        <p>
+          <label for="productName">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
+          <input type="text" name="productName" id="productName" autocomplete="off" />
+          <span></span>
+        </p>
+        <p>
+          <label for="brand">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
+          <input type="text" name="brandName" id="brandName" autocomplete="off" />
+          <span></span>
+        </p>
+        <p>
+          <label for="officialPrices">官方指导价：</label>
+          <input type="text" name="officialPrices" id="officialPrices" autocomplete="off" />
+          <span></span>
+        </p>
+        <p>
+          <label for="resalePrice">二手回收价：</label>
+          <input type="text" name="resalePrice" id="resalePrice" autocomplete="off" />
+          <span></span>
+        </p>
+        <p>
+          <label for="file" >图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</label>
+          <input type="file" name="file" id="file" autocomplete="off" />
+          <span></span>
+        </p>
+        <p><button type="button" id="ok">确认</button><button type="button" id="cancel">取消</button></p>
+      </form>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>图片</th>
+            <th>手机名称</th>
+            <th>所属品牌</th>
+            <th>官方指导价</th>
+            <th>二手回收价</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>apple</td>
+            <td>苹果 iPhone XS Max</td>
+            <td>苹果</td>
+            <td>￥1800</td>
+            <td>￥1200</td>
+            <td><button>修改</button><button>删除</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="pagination">
+        <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
+            aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
+        <% for(var i = 0;i < totalPage; i++) { %>
+        <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
+            <%= i+1%><span class="sr-only">
+            </span></a>
+        </li>
+        <%}%>
+        <li>
+          <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
+              aria-hidden="true">»</span></a>
+        </li>
+      </ul>
 </body>
+
 </html>
 <script src="../jQuery/jquery.min.js"></script>
-<script src="../js/register.js"></script>
+<script src="../js/phone.js"></script>
