@@ -39,4 +39,6 @@ html, body { height: 100%; }
 .navbar-form button { width: 100px; }
 .navbar-form #serbtn { width: 70px; }
 
+.table > tfoot > tr > td { vertical-align: middle; }
+
 /*# sourceMappingURL=common.css.map */

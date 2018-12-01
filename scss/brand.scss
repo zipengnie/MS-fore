@@ -83,6 +83,9 @@
             outline: none;
             text-indent: 1em;
             font-size: 14px;
+            ::-webkit-input-placeholder {
+                color: red;
+            }
         }
         #file {
             align-self: center;
@@ -113,11 +116,11 @@
     th {
         text-align: center;
         border: 0.5px solid rgba(0, 0, 0, 0.5);
-        width: 60px;
+        // width: 60px;
     }
     td {
         border: 0.5px solid rgba(0, 0, 0, 0.5);
-        width: 60px;
+        // width: 60px;
     }
     a {
         display: inline-block;
@@ -128,5 +131,5 @@
             cursor: pointer;
             color: red;
         }
-    }
+    } 
 }

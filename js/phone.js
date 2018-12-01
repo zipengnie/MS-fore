@@ -2,18 +2,18 @@ $(document).ready(function () {
     //手机管理页面渲染
     $.get("http://localhost:3000/api/phone.html", show)
     function show(res) {
-        console.log(res.data.fileName);
         // 数据页面
         var str = "";
         for (var i = 0; i < res.data.length; i++) {
             str += `<tr>
              <td>${i + 1}</td>
-             <td><img src="http://10.36.140.130:3000/public/images/${res.data[i].fileName}"></img></td>
+             <td><img src="http://localhost:3000/images/${res.data[i].fileName}" style="width:60px;"></img></td>
              <td>${res.data[i].productName}</td>
              <td>${res.data[i].brandName}</td>
              <td>${"￥" + res.data[i].officialPrices}</td>
              <td>${"￥" + res.data[i].resalePrice}</td>
-             <td class="delete"><a href="#">删除</a><a href="#">修改</a></td>
+             <td><a class="delete">删除</a><a class="update">修改</a></td>
+             <td style="display:none;">${res.data[i]["_id"]}</td>
              </tr>`
         }
         $("#tbody").html(str);
@@ -73,6 +73,44 @@ $(document).ready(function () {
     $("#cancel").click(function () {
         $(".addForm").hide().siblings().show();
     })
+    // 删除手机数据功能
+    $("#tbody").on("click", ".delete", function () {
+        alert(1);
+            var id = $(this).parent().parent().find("td:last").html();
+            $.get("http://localhost:3000/api/phone/delete", { "id": id }, function (res) {
+                console.log(res);
+            })
+            if($(this) == "删除"){
+                $(this).parent().parent().remove();
+            }
+          
+            setTimeout(function(){
+                console.log(1);
+                $.get("http://localhost:3000/api/phone.html", show);
+                $.get("http://localhost:3000/api/phone.html", showli)
+            },100)
+            
+
+        })
+
+    // // 修改手机数据功能
+    // $("#tbody").on("click", ".update", function (evevt) {
+    //      alert(2);
+    //     $(".addForm").show();
+    //     $("h3").html("修改")
+    //     var id = $(this).parent().parent().find("td:last").html();
+    //     $.get("http://localhost:3000/api/phone/delete", { "id": id }, function (res) {
+    //         console.log(res);
+    //     })
+    //     // setTimeout(function(){
+    //     //     console.log(1);
+    //     //     $.get("http://localhost:3000/api/phone.html", show);
+    //     //     $.get("http://localhost:3000/api/phone.html", showli)
+    //     // },100)
+        
+
+    // })
+
 
     //产品名称输入框
     var productName = $("input[name='productName']");
@@ -158,10 +196,10 @@ $(document).ready(function () {
             alert("请填写新增信息并检查填写的信息是否正确！");
             e.preventDefault();
         } else if (productNameState == "ok" || brandNameState == "ok" || officialPricesState == "ok" || resalePriceState == "ok") {
-            //     $.post("http://localhost:3000//api/phone/upload",function(res){
-            //     alert(res);
-            // })
-            // console.log(res);
+                $.post("http://localhost:3000//api/phone/delete",function(res){
+                    console.log(res);
+            })
+            
         }
 
     })

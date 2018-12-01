@@ -12,50 +12,49 @@
   <!-- 公共样式 -->
   <link rel="stylesheet" href="../css/common.css">
   <!-- 自己的样式 -->
-  <link rel="stylesheet" href="../css/userInfo.css">
+  <link rel="stylesheet" href="../css/brand.css">
   <title>xx后台管理系统</title>
 </head>
 
 <body>
   <div class="container">
     <form class="navbar-form">
-      <button type="button" class="search btn btn-primary">新增</button>
+      <button type="button" id="add" class="search btn btn-primary">新增</button>
     </form>
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>序号</th>
-          <th>品牌LOGO</th>
-          <th>品牌名称</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>apple</td>
-          <td>苹果</td>
-          <td><button>修改</button><button>删除</button></td>
-        </tr>
-      </tbody>
-    </table>
-    <ul class="pagination">
-      <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
-          aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
-      <% for(var i = 0;i < totalPage; i++) { %>
-      <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
-          <%= i+1%><span class="sr-only">
-          </span></a>
-      </li>
-      <%}%>
-      <li>
-        <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
-            aria-hidden="true">»</span></a>
-      </li>
-    </ul>
-    p
+    <div>
+      <form action="http://localhost:3000/api/brand/upload" method="post" enctype="multipart/form-data" class="addForm">
+        <h3>新&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增</h3>
+        <p>
+          <label for="brandName">品&nbsp;&nbsp;牌&nbsp;&nbsp;名&nbsp;&nbsp;称：</label>
+          <input type="text" name="brandName" id="brandName" autocomplete="off" />
+          <span></span>
+        </p>
+        <p>
+          <label for="file">品&nbsp;&nbsp;牌&nbsp;&nbsp;LOGO：</label>
+          <input type="file" name="file" id="file" autocomplete="off" />
+          <span></span>
+        </p>
+        <p><button type="submit" id="ok">确认</button><button type="button" id="cancel">取消</button></p>
+      </form>
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>品牌LOGO</th>
+            <th>品牌名称</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+      <ul class="pagination">
+
+      </ul>
 </body>
 
 </html>
 <script src="../jQuery/jquery.min.js"></script>
-<script src="../js/register.js"></script>
+<script src="../js/brand.js"></script>

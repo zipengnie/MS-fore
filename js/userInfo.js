@@ -86,7 +86,7 @@ $(document).ready(function () {
             } else if (res.code == 0 && res.message == "查询0条数据") {
                 alert(res.message);
             } else if (serbtn.prev().find("input").val() == "") {
-                alert("请输入查询条件");
+                location.reload();
             } else {
                 show(res);
                 $.get("http://localhost:3000/api/userInfo.html?", { totalSize: res.data.length }, showli)
@@ -105,7 +105,7 @@ $(document).ready(function () {
             $(this).parent().remove();
             $.get("http://localhost:3000/api/userInfo.html", show);
             $.get("http://localhost:3000/api/userInfo.html", showli)
-
+            location.reload();
         }
     })
 })  
