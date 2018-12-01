@@ -21,16 +21,16 @@
     <form class="navbar-form">
       <button type="button" id="add" class="search btn btn-primary">新增</button>
     </form>
-    <div class="addInfo">
-      <form class="addForm">
-        <h3>新增</h3>
+    <div>
+      <form action="http://localhost:3000/api/phone/upload" method="post" enctype="multipart/form-data" class="addForm">
+        <h3>新&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增</h3>
         <p>
           <label for="productName">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
           <input type="text" name="productName" id="productName" autocomplete="off" />
           <span></span>
         </p>
         <p>
-          <label for="brand">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
+          <label for="brandName">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
           <input type="text" name="brandName" id="brandName" autocomplete="off" />
           <span></span>
         </p>
@@ -45,12 +45,13 @@
           <span></span>
         </p>
         <p>
-          <label for="file" >图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</label>
+          <label for="file">图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</label>
           <input type="file" name="file" id="file" autocomplete="off" />
           <span></span>
         </p>
-        <p><button type="button" id="ok">确认</button><button type="button" id="cancel">取消</button></p>
+        <p><button type="submit" id="ok">确认</button><button type="button" id="cancel">取消</button></p>
       </form>
+
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
@@ -63,31 +64,12 @@
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>apple</td>
-            <td>苹果 iPhone XS Max</td>
-            <td>苹果</td>
-            <td>￥1800</td>
-            <td>￥1200</td>
-            <td><button>修改</button><button>删除</button></td>
-          </tr>
+        <tbody id="tbody">
+
         </tbody>
       </table>
       <ul class="pagination">
-        <li class="disabled"><a href="/userInfo.html?page=<%= page-1 < 1 ? 1 : page-1 %>&pageSize=<%= pageSize %>"
-            aria-label="Previous" style="cursor: pointer;"><span aria-hidden="true">«</span></a></li>
-        <% for(var i = 0;i < totalPage; i++) { %>
-        <li class="<%= page == (i+1) ? " active" : "" %>"><a href="/userInfo.html?page=<%= i+1 %>&pageSize=<%= pageSize %>">
-            <%= i+1%><span class="sr-only">
-            </span></a>
-        </li>
-        <%}%>
-        <li>
-          <a href="/userInfo.html?page=<%=page+1 < 1 ? 1 : page+1 %>&pageSize=<%= pageSize %>" aria-label="Next"><span
-              aria-hidden="true">»</span></a>
-        </li>
+
       </ul>
 </body>
 

@@ -29,7 +29,8 @@ $(document).ready(function () {
         }
         $("#tbody").html(str);
     }
-    //用户管理页面分页功能
+    
+    //页面分页功能
     $.get("http://localhost:3000/api/userInfo.html", showli)
     function showli(res) {
         // 分页列表
@@ -87,23 +88,9 @@ $(document).ready(function () {
             } else if (serbtn.prev().find("input").val() == "") {
                 alert("请输入查询条件");
             } else {
-                alert(res.message);
-                $("#searchTab").css({"display":"block","background":"#fff"});
-              
-                var str = "";
-                for (var i = 0; i < res.data.length; i++) {
-                    if (res.data[i].isAdmin == "是") {
-                        str += `<tr>
-                        <td>${i + 1}</td>
-                        <td>${res.data[i].userName}</td>
-                        <td>${res.data[i].nickname}</td>
-                        <td>${res.data[i].age}</td>
-                        <td>${res.data[i].sex}</td>
-                        <td>${res.data[i].isAdmin}</td>
-                        </tr>`
-                    } 
-                }
-                $("#searchTbody").html(str).css("display","block");
+                show(res);
+                $.get("http://localhost:3000/api/userInfo.html?", { totalSize: res.data.length }, showli)
+
             }
         })
     })
