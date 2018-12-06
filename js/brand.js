@@ -75,8 +75,8 @@ $(document).ready(function () {
     // 修改品牌数据功能
     $("#tbody").on("click", ".update", function () {
         var id = $(this).parent().find("td:last").html();
-        // console.log(id);
-        $.get("http://localhost:3000/api/brand/check", { "_id": id }, function (res) {
+        console.log(id);
+        $.get("http://localhost:3000/api/brand/check", { "id": id }, function (res) {
 
         console.log(res);
     })
